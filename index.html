@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    <!--------------------------------------------------------------------------------------------------------------------->
+    <div class="settings-container" id="Two-player-container">
+        <div>
+        <input class="Name-field" id="Player-One-Name" type="text" name="player-One" placeholder="Player One Name" />
+        </div>
+            <div>
+        <input class="Name-field" id="Player-Two-Name" type="text" name="player-Two" placeholder="Player Two Name" />
+        </div>
+        <div><button onclick="saveUserInput()" class="button" id="next-btn"> Next </button> </div>
+    </div>
+
+    <div class="settings-container" id="Number-of-players">
+        <h1>Antal Spelare</h1>
+        <div> 
+            <button onclick="onePlayerOpition()" class="button" id="One-player-button">1 Spelare</button>
+            <button onclick="twoPlayerOpition()" class="button" id="Two-player-button">2 Spelare</button>
+        </div>
+    </div>
+    <!--------------------------------------------------------------------------------------------------------------------->
+
+    <div class="leftSideGame"> 
+        <div class="active-player-name">Player:<div id="active-player-name"> </div></div>
+        <div class="container" id="game-container"></div>
+    </div>
+    <div class="scoresideright">
+        <h1>Poäng</h1> <button onclick="endGame()" class="button end">Avsluta</button>
+        <div class="firstplayer"> 
+            <h2 id="player1Name"> Player: <span id="player-one-name"></span></h2>
+            <h2 id="player1Points">Points: <span id="player-one-points"></span></h2>
+        </div>
+        <div class="Secondplayer"> 
+            <h2 id="player2Name"> Player: <span id="player-two-name"></span></h2>
+            <h2 id="player2Points">Points: <span id="player-two-points"></span></h2>
+        </div>
+
+        <div class="history-container"> 
+            <h1 calss="history" >History</h1>
+            <ul id="ul-History">
+            </ul>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
